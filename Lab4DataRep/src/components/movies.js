@@ -7,9 +7,9 @@ export class Movies extends React.Component{
     //Props passes the movie data between parent and child component
     render(){
 
-        return this.props.myMovies.map(
-            (movie)=>{
-               return <MovieItem myMovies={movie}></MovieItem>
+        return this.props.myMovies.map( (movie)=>{
+                //Reloaddata passes data from the parent
+               return <MovieItem myMovies={movie} ReloadData={this.props.ReloadData}></MovieItem>
             }
         );
 
